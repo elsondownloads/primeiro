@@ -1,0 +1,514 @@
+=============================================
+	BUILD ESSENTIALS
+
+sudo apt-get update
+sudo apt-get install build-essential
+
+
+
+
+
+=============================================
+	CODEBLOCKS
+
+sudo add-apt-repository ppa:damien-moore/codeblocks-stable
+sudo apt-get update
+sudo apt-get install codeblocks
+
+sudo add-apt-repository ppa:damien-moore/codeblocks-stable --remove
+sudo apt-get remove codeblocks
+sudo apt-get autoremove
+
+==============================================
+	CODELITE
+
+sudo add-apt-repository ppa:eugenesan/ppa -y
+sudo apt-get update
+sudo apt-get install codelite -y
+sudo Uninstall Or remove :- apt-get remove codelite -y
+
+
+	CHROME
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get install -f
+
+
+	UNITY TWEAK TOOL   - move close to the right
+
+
+
+
+------------------------------------------
+flashless-extras
+quidsub 
+
+
+wget https://raw.githubusercontent.com/quidsup/flashless-extras/master/flashless.sh
+bash flashless.sh
+
+apt list --upgradable
+
+
+
+
+
+
+
+
+
+
+ubuntu-mate-welcome                                                     
+
+
+
+
+
+terminal: 
+
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+
+
+
+
+
+	CHANGE TO THE RIGHT  
+
+check unity version 
+unity --version
+
+
+update manager
+
+sudo update-manager -c
+sudo do-release-upgrade -p -m desktop
+
+
+PACKAGE MANAGER
+
+Synaptic Package Manager
+
+
+
+
+
+CHECK MEMORY USAGE
+
+free -mt
+
+
+SYSTEM 
+gnome-system-monitor &
+
+
+#include<conio.h>  instead  install 
+
+sudo apt-get install libncurses5-dev libncursesw5-dev
+#include <curses.h>
+
+
+
+
+
+
+
+November 13, 1997  -  April 8, 1998
+December 31, 1997
+
+
+
+/*DEFINICAO DE ANO BISSEXTO:
+*ser multiplo de 4
+*nao ser multiplo de 100
+*ser multiplo de 400
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================
+INSTALAR .DEB VIA TERMINAL  ( -i  INSTALL -r REMOVE)
+
+
+sudo dpkg -r PACKAGE_NAME
+sudo dpkg -i DEB_PACKAGE
+
+
+RECONFIGURAR
+sudo dpkg-reconfigure PACKAGE_NAME
+
+
+==============================================================
+
+DPKG commands
+
+There are two actions, they are dpkg-query and dpkg-deb.
+
+Install a package
+
+# sudo dpkg -i {package_name}    
+# sudo dpkg -i skype-ubuntu-precise_4.2.0.11-1_i386.deb
+Remove a package
+
+# sudo dpkg -r {package_name}
+# sudo dpkg -r vlc
+Remove a package and its configuration files
+
+# sudo dpkg -P {package_name}
+# sudo dpkg -P vlc
+List all installed packages.
+
+You can pipe the command to less (a pager) so you can more easily scroll the content:
+
+# dpkg -l | less
+Check if the package is installed or not
+
+# dpkg -l {package_name}
+# dpkg -l vlc
+Check if the package is installed or not, and if it is, launch it:
+
+# dpkg -l | vlc
+See whether a package is installed or not
+
+And this will show the location where the package will be installed. Here -S (capital S) to search whether the package was installed or not.
+
+# sudo dpkg -S {package_name}
+# sudo dpkg -S skype
+Install a *.deb package from a specified location
+
+Here -R is recursive. (Recursively handle all regular files matching the pattern  *.deb found at specified directories and all of its subdirectories).
+
+# sudo dpkg -R --install {package_location}
+# sudo dpkg -R --install /home/sysadmin/soft
+Show package details
+
+Here -p (lowercase p) will show the package info:
+
+# dpkg -p {package_name}
+# dpkg -p apache2
+View the content of a package
+
+Use -c (lowercase c) to show the content:
+
+# sudo dpkg -c {package_name}
+# sudo dpkg -c skype-ubuntu-precise_4.2.0.11-1_i386.deb
+Extract the *.deb package file
+
+Use -x (lowercase x) to extract:
+
+# dpkg -x {package_name} {location_were_to_extract}
+# dpkg -x libqt4-phonon_4.6.3-4+squeeze1_i386.deb /home/sysadmin/
+Extract and display the filenames contained in a package
+
+Use -X (uppercase X) to display the content with extraction.
+
+# dpkg -X {package_name} {location_were_to_extract}
+# dpkg -X libqt4-phonon_4.6.3-4+squeeze1_i386.deb /home/sysadmin/
+Display information about a package
+
+Here -I stands for information:
+
+# dpkg -I {package_name}
+# dpkg -I libqt4-phonon_4.6.3-4+squeeze1_i386.deb
+Reconfigure an already installed package
+
+dpkg-reconfigure reconfigures packages after they already have been installed. Pass it the name(s) of a package or packages to reconfigure. It will ask configuration questions, much like when the package was first installed.
+
+# dpkg-reconfigure postfix
+This will reconfigure postfix the same way as when you installed it for the first time.
+
+Need to know more about dpkg commands? Have a look at the manual page:
+
+# man dpkg
+
+
+
+=============================================================
+DISABLE REPOSITORIES 
+
+
+
+You can disable third party repository by following any of two ways:
+
+Execute this command in terminal
+
+sudo software-properties-gtk
+In Software Sources window go to Other Softwares .tab and delete or uncheck the repositories listed there. First delete/uncheck the repositories except first four. If it doesn't solve your issue then Uncheck the first four also. Close and run sudo apt-get update
+You can also disable by following these steps:
+
+Ubuntu Software Center > Edit > Software Sources > Other Software tab > clear/uncheck the check-boxes. Follow the same rule as given in 1st method.
+3rd part repository provides additional packages/software which are generally not available in default Ubuntu repository. So disabling it would not cause any issue.
+
+
+
+
+
+
+============================================
+BROKEN PACKAGE SYSTEM 
+
+sudo apt-get --fix-broken install
+
+
+
+
+
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+sudo apt-get update
+
+sudo apt-get install qbittorrent
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+typedef struct{
+	char *weapon;
+	int wepAmount;
+  
+}Inventory;
+
+
+
+typedef struct{
+	char *name;
+	int power;
+	Inventory *bag;
+	
+}Hero;
+
+
+int main(){
+	
+	
+	Inventory *bolsa = (Inventory*)malloc(sizeof(Inventory));
+	Hero* myHero = (Hero*)malloc(sizeof(Hero));
+	
+	myHero->bag=&bolsa;
+	myHero->name = "Link";
+	myHero->power = 20;
+	myHero->bag->weapon = "sword";
+	myHero->bag->wepAmount = 50;
+	
+	
+	puts(myHero->name);
+	puts(myHero->bag->weapon);
+	puts(myHero->bag->wepAmount);
+	
+	
+	
+	return 0;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+///-------------ARRAY OF STRUCTS
+
+/*
+typedef struct{
+	char title[40];
+	char artist[35];
+	char no_of_tracks[5];
+	char year[5];
+	
+}Album;
+*/
+/*
+void displayAlbum( Album *a){
+	//printf("\n Info sobre o Album\n");
+	puts(a->title);
+	puts(a->artist);
+	puts(a->no_of_tracks);
+	puts(a->year);
+	//printf("\n");
+}
+
+
+
+int main(){
+	/*
+	//CRIAR UMA ARRAY DE ALBUNS
+	Album album[2];
+	int i, j;
+	
+	for(i=0; i<2;i++){
+		printf("Digite o Titulo:");
+		gets(album[i].title);
+		
+		printf("Digite o artista:");
+		gets(album[i].title);
+		
+		printf("Digite o numero_de_faixas:");
+		gets(album[i].no_of_tracks);
+		
+		
+		printf("Digite o ano:");
+		gets(album[i].year);
+		
+	}
+	
+	
+	printf("\nMostrando as informacoes ...\n\n");
+	
+	
+		for(j=0; j<2;j++){
+		printf("Titulo:");
+		puts(album[j].title);
+		
+		printf("artista:");
+		puts(album[j].title);
+		
+		printf("Digite o numero_de_faixas:");
+		puts(album[j].no_of_tracks);
+		
+		
+		printf("ano:");
+		puts(album[j].year);
+		printf("\n");
+	}
+	 
+	 
+     //POINTER TO STRUCTS
+	 Album album;
+	 
+	 
+	 
+	 strcpy(album.title,"Ocarina of Time");
+	 strcpy(album.artist, "Michael");
+	 strcpy(album.no_of_tracks, "5");
+	 strcpy(album.year, "1998");
+ 
+	displayAlbum(&album);
+	return 0;
+}
+
+
+*/
+
+
+
+
+
+/*
+typedef struct{
+	char *name;
+	int age;
+	
+}person;
+
+
+
+void main(void){
+	
+	//printf("tamanho %d\n",sizeof(person));
+	
+	person *myperson = malloc(sizeof(person));
+	myperson->name = "John";
+	myperson->age = 27;
+	
+	
+	free(myperson);
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+int main(void){
+
+
+
+ void *aPtr = {0};   //ponteiro void pode aponter para qualquer tipo
+ 
+ //defino 3 tipos 
+ int a = 44; 
+ 
+ char b = 'f'; 
+ 
+ int array1[40] = {0};
+ 
+ //e aponto para qualquer um deletes
+ aPtr = &a;
+ //aPtr = &b;
+ //aPtr = &array1;
+
+ printf("O valor de ponteiro : %d\n",*(int*)aPtr);
+
+
+		return 0;
+}
+*/
+
+/*
+	printf("sizeof INT:\t%li bytes\n", sizeof(int));
+	printf("sizeof FLOAT:\t%li bytes\n", sizeof(float));
+	printf("sizeof DOUBLE:\t%li bytes\n", sizeof(double));
+	printf("sizeof CHAR:\t%cli bytes\n", sizeof(char));
+
+
+
+  int i = 99;;
+  	printf("sizeof i:\t%li bytes\n", sizeof(i));
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
